@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloqueador de Sites</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 10px;
+      width: 300px;
+      box-sizing: border-box;
+    }
+    h1 {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    #message {
+      color: green;
+      font-weight: bold;
+      margin-bottom: 10px;
+      display: none;
+    }
+    .button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 10px;
+      font-size: 14px;
+      border-radius: 5px;
+    }
+    .button:hover {
+      background-color: #45a049;
+    }
+    #siteList {
+      list-style-type: none;
+      padding: 0;
+    }
+    #siteList li {
+      background-color: #f4f4f4;
+      padding: 8px;
+      margin: 5px 0;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #siteList li button {
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      font-size: 12px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    #siteList li button:hover {
+      background-color: #c0392b;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bloqueador de Sites</h1>
+  <div id="message"></div>
+  <input type="text" id="siteInput" placeholder="Digite o site" />
+  <button class="button" id="addSite">Adicionar Site</button>
+  <button class="button" id="clearAll">Limpar Todos</button>
+  <ul id="siteList"></ul>
+  <button class="button" id="blockSiteBtn">Bloquear Site Atual</button>
+  <script src="popup.js"></script>
+</body>
+</html>
